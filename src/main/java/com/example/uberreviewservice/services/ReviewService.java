@@ -21,8 +21,6 @@ public class ReviewService implements CommandLineRunner {
         Review r = Review.builder()
                 .content("good riding")
                 .rating(4.5) // Code to create only java object
-                .createdAt(new Date())
-                .updatedAt(new Date())
                 .build();
         reviewRepository.save(r);// this line of code responsible for saving the object in database using sql queries...
         List<Review> reviews = reviewRepository.findAll();
