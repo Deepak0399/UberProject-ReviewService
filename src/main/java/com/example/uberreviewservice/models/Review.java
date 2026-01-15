@@ -17,4 +17,6 @@ public class Review extends BaseModel {
     private String comment;
 
     private Double rating;
+    @ManyToOne
+    private Booking booking;
 }

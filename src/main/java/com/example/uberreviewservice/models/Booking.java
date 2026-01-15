@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
+
 @Getter
 @Setter
 @Builder
@@ -17,7 +19,7 @@ public class Booking extends BaseModel {
     private Review review;
     @ManyToOne
     private Driver driver;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Passenger passenger;
 
     @Enumerated(value = EnumType.STRING)
