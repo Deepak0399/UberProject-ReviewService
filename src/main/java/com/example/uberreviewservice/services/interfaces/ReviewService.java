@@ -13,7 +13,7 @@ public interface ReviewService {
 
     List<Review> findAllReviews();
 
-    boolean deleteReviewById();
+    boolean deleteReviewById(Long id);
 
     Review createReview(Review review);
 

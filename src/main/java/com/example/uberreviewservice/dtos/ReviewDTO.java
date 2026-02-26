@@ -8,5 +8,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReviewDTO {
+    private String comment;
 
+    private Double rating;
+
+    private Long bookingId;
 }

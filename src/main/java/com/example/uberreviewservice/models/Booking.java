@@ -3,9 +3,7 @@ package com.example.uberreviewservice.models;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.Date;
-import java.util.List;
 
 @Getter
 @Setter
@@ -15,9 +13,8 @@ import java.util.List;
 @Entity
 public class Booking extends BaseModel {
 
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
-    private Review review;
-    @ManyToOne
+
+    @ManyToOne(fetch = FetchType.LAZY)
     private Driver driver;
     @ManyToOne(fetch = FetchType.LAZY)
     private Passenger passenger;
